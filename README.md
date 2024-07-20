@@ -1,4 +1,4 @@
-# 3D-graphics-engine
+# 3D-Graphics-Engine
 
 3D-grahics engine implementation in C using OpenGL. GLFW is utilized for window, context, surfaces, inputs and events.  
 
@@ -6,20 +6,17 @@ This is a personal project for learning graphics programming and OpenGL and not 
 
 
 Current Features:
-
     Open a window
     Draw a triangle
 
 
 Progression log:
-
     Basic shaders implemented
     Window opened succesfully
     Triangle printed
     Program structure decided
 
 TODO:
-
     Camera
     Orientation of a triangle
     Cube

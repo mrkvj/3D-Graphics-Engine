@@ -6,16 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include <cglm/cglm.h>
-#include <cglm/struct.h>
-
-
-//typedef struct {
-//    int x;
-//    int y;
-//} ivec2s;
+#include <cglm/mat4.h>
 
 
 #endif

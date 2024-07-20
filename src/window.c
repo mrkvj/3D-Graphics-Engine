@@ -8,6 +8,10 @@ struct Window window;
 //  }
 //}
 
+
+/**
+ * Create a new window. 
+ */
 void window_create(FWindow init, FWindow destroy, FWindow tick, FWindow update, FWindow render) {
 
   window.init = init;
@@ -56,7 +60,8 @@ void window_create(FWindow init, FWindow destroy, FWindow tick, FWindow update, 
 
 void window_loop() {
   window.init();
-  while (/*glfwGetKey(window.handle, GLFW_KEY_ESCAPE) != GLFW_PRESS && */glfwWindowShouldClose(window.handle) == 0) {
+  glfwSetInputMode(window.handle, GLFW_STICKY_KEYS, GL_TRUE);
+  while (glfwGetKey(window.handle, GLFW_KEY_ESCAPE) != GLFW_PRESS && glfwWindowShouldClose(window.handle) == 0) {
     window.render();
     glfwSwapBuffers(window.handle);
     glfwPollEvents();

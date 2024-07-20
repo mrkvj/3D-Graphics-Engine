@@ -2,6 +2,7 @@
 
 struct State state;
 
+// Initialize everything
 void init() {
   state.window = &window;
   renderer_init(&state.renderer);
@@ -16,6 +17,7 @@ void tick() {
 void update() {
 }
 
+// Render frame
 void render() {
   renderer(&state.renderer);
 }

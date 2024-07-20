@@ -28,6 +28,7 @@ struct Renderer {
     
     struct VAO vao;
     struct VBO vbo;
+    GLuint matrid;
 };
 
 void renderer_init(struct Renderer *self);

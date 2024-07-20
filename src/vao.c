@@ -1,4 +1,3 @@
-#include "util.h"
 #include "vao.h"
 
 struct VAO vao_create() {
@@ -7,21 +6,18 @@ struct VAO vao_create() {
     return self;
 }
 
+void vao_enable(GLuint index) {
+    glEnableVertexAttribArray(index);
+}
+
+void vao_disable(GLuint index) {
+    glDisableVertexAttribArray(index);
+}
+
 void vao_bind(struct VAO self) {
     glBindVertexArray(self.handle);
 }
 
-void vao_attr(struct VAO self, /*struct VBO vbo,*/ GLuint index, GLint size, GLenum type, GLsizei stride, size_t offset) {
-    vao_bind(self);
-    glVertexAttribPointer(
-      index,        //  atribute 0 (must match layout in the shader)
-      size,     // size
-      type, // type
-      GL_FALSE, // normalized
-      stride,        // stride
-      (void*) offset  // buff offset
-    );
-
-    glEnableVertexAttribArray(index); // ?
-
+void vao_attrib(/*struct VAO self, */GLuint index, GLint size, GLenum type, GLboolean normalized, GLint stride/*, GLint offset*/) {
+    glVertexAttribPointer(index, size, type, normalized, stride, (void*)0);
 }

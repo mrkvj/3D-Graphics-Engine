@@ -1,8 +1,9 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-//#include <GLFW/glfw3.h>
-#include "util.h"
+#include <GL/glew.h> 
+#include <GLFW/glfw3.h>     // For Windows, Contexts and Input.
+#include <cglm/struct.h>    // For ivec2s
 
 typedef void (*FWindow)();
 

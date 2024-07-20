@@ -3,17 +3,13 @@
 
 #include "renderer.h"
 #include "window.h"
-//#include "world.h"
 
-
-struct GameState {
+struct State {
     struct Window *window;
     struct Renderer renderer;
-    //struct World world;
-    //struct UI ui;
-    //size_t ticks;
 };
 
-extern struct GameState state;
+// Global state
+extern struct State state;
 
 #endif

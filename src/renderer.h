@@ -1,16 +1,22 @@
 #ifndef RENDERER_H
 #define RENDERER_H
-#define SHADERS_LAST SHADER_BASIC_COLOR
+#define SHADERS_LAST SIMPLE_SHADER
 
-#include "util.h"
-#include "shader.h"
+#include <GL/glew.h>
 #include "vao.h"
+#include "vbo.h"
+#include "../common/loadShaders.h"
 
-#define SHADERS_LAST SHADER_BASIC_COLOR
+#define SHADERS_LAST SIMPLE_SHADER
+
 enum ShaderType {
     SHADER_NONE = 0,
     // ADD MORE SHADERS HERE
-    SHADER_BASIC_COLOR
+    SIMPLE_SHADER
+};
+
+struct Shader {
+    GLuint handle;
 };
 
 struct Renderer {
@@ -21,9 +27,11 @@ struct Renderer {
     struct Shader shader;
     
     struct VAO vao;
+    struct VBO vbo;
 };
 
 void renderer_init(struct Renderer *self);
+void renderer_prep(struct Renderer *self);
 void renderer(struct Renderer *self);
 
 #endif

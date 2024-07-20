@@ -2,8 +2,7 @@
 
 3D-grahics engine implementation in C using OpenGL. GLFW is utilized for window, context, surfaces, inputs and events.  
 
-This is a personal project for learning graphics programming and OpenGL and not intended for practical use.
-
+This is a personal project intended for learning graphics programming and OpenGL. 
 
 Current Features:
 

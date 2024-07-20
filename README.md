@@ -26,5 +26,8 @@ TODO:
     Spinning cube
 
 Resources: 
- GLFW: https://www.glfw.org/
- OpenGL: https://www.opengl-tutorial.org/
+ GLFW: 
+    https://www.glfw.org/
+ OpenGL: 
+    https://www.opengl-tutorial.org/
+    https://www.khronos.org/opengl/wiki/Main_Page

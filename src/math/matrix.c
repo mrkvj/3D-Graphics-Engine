@@ -72,33 +72,3 @@ void mat4ToFloat(fmat dest, mat4 mat) {
         }
     }
 }
-
-
-
-/* For possibly implementing all math myself later
-
-// Multiply two 4x4 matrices
-mat4** mat4Mul(const mat4 A, const mat4 B) {
-    mat4* M = (mat4*) malloc(sizeof(mat4));
-    //mat4 M;
-    for (u8 i = 0; i <= 3; i++) {
-        for (u8 j = 0; j <= 3; j++) {
-            (*M)[i][j] = A[i][j] * B[i][j];
-        }
-    }
-    return M;
-}
-
-// Multiply 4x4 matrix with 4x1 vector
-vec4* mat4Vec4Mul(const mat4 A, const vec4 v) {
-    vec4 u; 
-    for (u8 i = 0; i < 4; i++) {
-        float sigma = 0;
-        for (u8 j = 0; j < 4; j++) {
-            sigma += A[i][j] * v[j];
-        }
-        u[i] = sigma;
-    }
-    return u;
-}
-*/

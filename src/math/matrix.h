@@ -30,7 +30,4 @@ void projectionMatrix(struct Perspective p, mat4 dest);
 void mvpMatrix(mat4 projMat, mat4 viewMat, mat4 modelMat, mat4 dest);
 void mat4ToFloat(fmat dest, mat4 mat);
 
-//mat4* mat4Mul(const mat4 A, const mat4 B);
-//vec4* mat4Vec4Mul(const mat4 A, const vec4 v);
-
 #endif

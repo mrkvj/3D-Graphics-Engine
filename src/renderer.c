@@ -55,6 +55,41 @@ void renderer(struct Renderer *self) {
     // Set current shader
     _renderer_use_shader(self, SIMPLE_SHADER);
 
+    //struct Perspective pers;
+    //pers.fov = 45;
+    //pers.aspect = 4/3;
+    //pers.near = 0.1;
+    //pers.far = 100;
+    //struct Camera cam;
+    //glm_vec3_copy((vec3){4.0f, 3.0f, 3.0f}, cam.camPos);
+    //glm_vec3_copy((vec3){0.0f, 0.0f, 0.0f}, cam.camTarget);
+    //glm_vec3_copy((vec3){0.0f, 1.0f, 0.0f}, cam.upVec);
+
+    //mat4* projMat = (mat4*) malloc(sizeof(mat4));
+    //if (projMat == NULL) {printf("Matrix memory allocation failed."); exit(1);}
+    //mat4* viewMat = (mat4*) malloc(sizeof(mat4));
+    //if (viewMat == NULL) {printf("Matrix memory allocation failed."); exit(1);}
+    //mat4* modelMat = (mat4*) malloc(sizeof(mat4));
+    //if (modelMat == NULL) {printf("Matrix memory allocation failed."); exit(1);}
+    //mat4* mvpMat = (mat4*) malloc(sizeof(mat4));
+    //if (mvpMat == NULL) {printf("Matrix memory allocation failed."); exit(1);}
+    //float** mvpFMat = (float**) malloc(sizeof(float));
+    //if (mvpFMat== NULL) {printf("Matrix memory allocation failed."); exit(1);}
+
+    //projectionMatrix(pers, projMat);
+    //cameraMatrix(cam.camPos, cam.camTarget, cam.upVec, viewMat);
+    //glm_mat4_identity(*modelMat);
+    //mvpMatrix(*projMat, *viewMat, *modelMat, mvpMat);
+    //mat4ToFloat(mvpFMat, mvpMat);
+    
+    //glUniformMatrix4fv(self->matrid, 1, GL_FALSE, &mvpFMat[0][0]);
+
+    //free(projMat);
+    //free(viewMat);
+    //free(modelMat);
+    //free(mvpMat);
+    //free(mvpFMat);
+
     glUniformMatrix4fv(self->matrid, 1, GL_FALSE, &mvp[0][0]);
 
     GLuint attribute = 0; // Shader layout attribute

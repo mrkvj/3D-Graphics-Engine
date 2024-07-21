@@ -6,6 +6,8 @@
 #include "vao.h"
 #include "vbo.h"
 #include "../common/loadShaders.h"
+#include "camera.h"
+#include "math/matrix.h"
 
 #define SHADERS_LAST SIMPLE_SHADER
 

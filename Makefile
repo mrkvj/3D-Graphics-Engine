@@ -4,11 +4,13 @@ CFLAGS  = -std=c11 -O3 -g -Wall -Wextra -Wpedantic -Wstrict-aliasing
 CFLAGS += -I/opt/homebrew/Cellar/glfw/3.4/include
 CFLAGS += -I/opt/homebrew/Cellar/glew/2.2.0_1/include
 CFLAGS += -I/opt/homebrew/Cellar/cglm/0.9.4/include
+CFLAGS += -I/opt/homebrew/Cellar/cunit/2.1-3/include    
 
 LDFLAGS  = -lGLEW -lglfw -lcglm -framework OpenGL
 LDFLAGS += -L/opt/homebrew/Cellar/glew/2.2.0_1/lib
 LDFLAGS += -L/opt/homebrew/Cellar/glfw/3.4/lib
 LDFLAGS += -L/opt/homebrew/Cellar/cglm/0.9.4/lib
+LDFLAGS += -L/opt/homebrew/Cellar/cunit/2.1-3/lib
 
 SRC=$(wildcard common/*.c) \
 	$(wildcard src/**/*.c) \
@@ -17,6 +19,7 @@ OBJ=$(patsubst src/%.c,obj/src/%.o,$(wildcard src/*.c)) \
 	$(patsubst src/math/%.c,obj/src/math/%.o,$(wildcard src/math/*.c)) \
 	$(patsubst common/%.c,obj/common/%.o,$(wildcard common/*.c))
 BIN=bin
+TOB=$(TEST_SRC:.c=.o)
 
 .PHONY: all clean dirs run game
 
@@ -36,6 +39,10 @@ run: all
 game: $(OBJ)
 	$(CC) -o $(BIN)/game $^ $(LDFLAGS)
 
+test: $(TOB)
+	$(CC) -o test_runner $(TEST_OBJ) $(LDFLAGS)
+	./test_runner
+
 obj/src/%.o: src/%.c
 	$(CC) -o $@ -c $< $(CFLAGS)
 
@@ -48,5 +55,6 @@ obj/src/math/%.o: src/math/%.c
 clean:
 	rm -rf obj/*
 	rm -rf bin/*
+	rm -rf $(test_obj) test_runner
 
 

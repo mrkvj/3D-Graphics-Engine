@@ -1,4 +1,4 @@
-# 3D-Graphics-Engine
+# 3D Graphics Engine
 
 3D-grahics engine implementation in C using OpenGL. GLFW is utilized for window, context, surfaces, inputs and events.  
 
@@ -16,6 +16,7 @@ Progression log:
 - Window opened succesfully
 - Triangle printed
 - Program structure decided
+- Linear algebra added
 
 TODO:
 
@@ -31,3 +32,5 @@ Resources:
 - OpenGL: 
     - https://www.opengl-tutorial.org/
     - https://www.khronos.org/opengl/wiki/Main_Page
+- CGLM:
+    - https://cglm.readthedocs.io/en/latest/index.html
